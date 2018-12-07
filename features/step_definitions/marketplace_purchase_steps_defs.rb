@@ -6,10 +6,13 @@ Given("I am logged in to the marketplace website") do
   marketplace_sign_in_page.click_sign_in_button
 end
 
-Given("I have chosen to purchase an item") do
+Given("I have chosen to purchase a printed chiffon dress") do
   marketplace_my_account_page.enter_search_field("Printed Chiffon Dress")
   marketplace_my_account_page.click_search_button
   marketplace_search_results_page.click_chiffon_dress
+end
+
+Given("I add two, size M dresses to my cart") do
   marketplace_product_page.click_quantity_up_button
   marketplace_product_page.click_size_dropdown
   marketplace_product_page.choose_size('M')
